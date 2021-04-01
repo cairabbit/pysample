@@ -1,0 +1,2 @@
+def tolist(l):
+    return [int(x) for x in l.split()]

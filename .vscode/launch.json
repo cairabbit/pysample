@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "name": "Python: start",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/__init__.py",
+            "console": "internalConsole",
+            "redirectOutput": true
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole"
+        }, 
+        {
+            "name": "Tests",
+            "type": "python",
+            "request": "test",
+            "console": "internalConsole",
+            "justMyCode": false
+        } 
+    ]
+}
