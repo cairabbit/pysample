@@ -4,7 +4,114 @@ from nzoi2021.count_digit import *
 from nzoi2021.caldulator import *
 from nzoi2021.chocolate import *
 from nzoi2021.chocolate2 import find_max_happiness as find_max_happiness2
+from nzoi2021.chocolate3 import find_max_happiness as find_max_happiness3
 
+def test_chocolate3():
+    case = 1
+    assert find_max_happiness3("3 3", "1", lambda i: [
+        "3 1 6"
+        ][i], case) == 6
+    case += 1
+    assert find_max_happiness3("3 3", "2", lambda i: [
+        "3 -1 6",
+        "2 8 -1"
+        ][i], case) == 14
+    case += 1
+    assert find_max_happiness3("4 6", "3", lambda i: [
+        "3 1 6",
+        "2 6 4",
+        "2 5 -1"
+        ][i], case) == 17
+    case += 1
+    assert find_max_happiness3("9 6", "5", lambda i: [
+        "5 9 8",
+        "6 12 4",
+        "3 9 44",
+        "4 8 20",
+        "2 12 5"
+        ][i], case) == -1
+    case += 1
+    assert find_max_happiness3("9 6", "5", lambda i: [
+        "1 9 8",
+        "3 12 4",
+        "3 9 44",
+        "4 8 20",
+        "2 12 5"
+        ][i], case) == 84
+    case += 1
+    assert find_max_happiness3("9 6", "5", lambda i: [
+        "1 9 8",
+        "3 12 12",
+        "3 9 44",
+        "4 20 20",
+        "2 12 5"
+        ][i], case) == 97
+    case += 1
+    assert find_max_happiness3("9 6", "5", lambda i: [
+        "1 9 8",
+        "3 20 20",
+        "3 9 44",
+        "4 20 20",
+        "2 12 5"
+        ][i], case) == 105
+    case += 1
+    assert find_max_happiness3("9 6", "5", lambda i: [
+        "1 9 8",
+        "3 18 18",
+        "3 44 44",
+        "4 20 20",
+        "2 12 5"
+        ][i], case) == 103
+    case += 1
+    assert find_max_happiness3("9 4", "5", lambda i: [
+        "1 9 8",
+        "3 18 18",
+        "3 44 44",
+        "4 20 20",
+        "2 12 5"
+        ][i], case) == 103
+    case += 1
+    assert find_max_happiness3("9 4", "5", lambda i: [
+        "1 9 8",
+        "3 18 18",
+        "3 44 44",
+        "3 20 20",
+        "2 12 5"
+        ][i], case) == 103
+    case += 1
+    assert find_max_happiness3("9 4", "5", lambda i: [
+        "1 9 8",
+        "4 -1 18",
+        "3 44 44",
+        "3 20 20",
+        "2 12 5"
+        ][i], case) == 103
+    case += 1
+    assert find_max_happiness3("9 4", "5", lambda i: [
+        "1 9 8",
+        "4 18 -1",
+        "3 44 44",
+        "3 20 20",
+        "2 12 5"
+        ][i], case) == 102
+    case += 1
+    assert find_max_happiness3("9 4", "5", lambda i: [
+        "1 9 8",
+        "4 18 16",
+        "3 44 44",
+        "3 20 20",
+        "2 12 5"
+        ][i], case) == 12+8+44+20+18
+    case += 1
+    assert find_max_happiness3("15 4", "6", lambda i: [
+        "3 9 8",
+        "4 18 1",
+        "3 0 44",
+        "3 12 20",
+        "3 20 20",
+        "3 12 5"
+        ][i], case) == 9+1+0+12+20+12
+        
 def test_chocolate2():
     case = 1
     assert find_max_happiness2("3 3", "1", lambda i: [
